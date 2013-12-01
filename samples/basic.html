@@ -24,7 +24,7 @@
   <script>
     app = angular.module('GCardBasic',['GCard']);
     app.controller('BasicController',function($scope) {
-      $scope.cards = [{title:'Heading 1',body:'My content',url:'http://github.com/bglick/angular-gcard'},{title:'Heading 2',body:'Other content'}];
+      $scope.cards = [{title:'Heading 1',body:'My content',link:{url:'http://github.com/bglick/angular-gcard',text:'my link'}},{title:'Heading 2',body:'Other content'}];
     });
   </script>
 </body>
