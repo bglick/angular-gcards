@@ -8,7 +8,8 @@ Usage
 
 * Include the js, css, and png file from the /dist folder in your project.  If you can't make the png addressable at `/images/gcard-url.png` then you'll need to edit it's location in the css file.
 * You can optionally  to wrap your entire card area in a block with class `gcard-wrap` to get a larger gray backround area
-* Create a card object in your controller. The `title`, `url`, and `hidden` attributes are used by the directive.  Any other data is ignored.
+* Create a card object in your controller. The `title`, `link`, and `hidden` attributes are used by the directive.  Any other data is ignored.
+* `link` attributes should have a `text` and `url` attributes so `{text:'My Link',url:'/index.html'}` becomes `<a href='/index.html'>My Link</a>`
 * Use  `<div g-card="card">...</div>` where `card` is your object, and the content inside the div is what you want to be [transcluded](http://docs.angularjs.org/api/ng.directive:ngTransclude)
 * Hide cards by setting the `hidden` attribute on the card to `true`.
 
