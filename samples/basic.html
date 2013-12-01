@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GCard Sample</title>
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:500,400,300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/dist/angular-gcard.css"/>
+</head>
+<body ng-app='GCardBasic'>
+  <h1>G Card Basic Example</h1>
+  <div ng-controller='BasicController' class='gcard-wrap'>
+    <ul class='gcard'>
+      <li ng-repeat='c in cards'>
+        <div g-card='c'>
+          {{c.body}}
+        </div>
+      </li>
+    </ul>
+    <a href='#' ng-click='cards[0].hidden = !cards[0].hidden'>Click To Toggle The First Card</a>
+  </div>
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.3/angular.min.js"></script>
+  <script src="/dist/angular-gcard.js"></script>
+  <script>
+    app = angular.module('GCardBasic',['GCard']);
+    app.controller('BasicController',function($scope) {
+      $scope.cards = [{title:'Heading 1',body:'My content',url:'http://github.com/bglick/angular-gcard'},{title:'Heading 2',body:'Other content'}];
+    });
+  </script>
+</body>
+</html>
